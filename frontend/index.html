@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LINKUP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section id="auth">
+    <h1>LINKUP</h1>
+    <p>Connect. Chat. Share.</p>
+    <input id="u" placeholder="Логин" autocomplete="username">
+    <input id="d" placeholder="Имя (только для регистрации)">
+    <input id="p" type="password" placeholder="Пароль" autocomplete="current-password">
+    <button id="login">Войти</button>
+    <button id="reg" class="ghost">Создать аккаунт</button>
+    <div id="err" role="alert"></div>
+  </section>
+
+  <div id="app" hidden>
+    <aside>
+      <header><b id="me"></b><button id="out" class="ghost">Выйти</button></header>
+      <input id="q" placeholder="Найти пользователя…">
+      <div id="list"></div>
+    </aside>
+    <main>
+      <header><button id="back" class="ghost">←</button><b id="title">Выберите чат слева</b></header>
+      <div id="msgs"></div>
+      <div class="send">
+        <input id="text" placeholder="Сообщение" autocomplete="off" disabled>
+        <button id="send" disabled>Отправить</button>
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
